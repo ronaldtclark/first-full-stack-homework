@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harleys Homepage</title>
+</head>
+<body>
+  <h1>Harley Davidson</h1>
+    <ul>
+      <% for ( let i = 0; i < harleys.length; i++) { %>
+        <li>
+          
+          <a href="/harleys/<%=harleys[i].id%>"><%=harleys[i].name%></a>
+
+          <!-- <form action="/harleys/<%=harleys[i].id%>?_method=DELETE" method="POST">
+            <button type="submit">Delete Harley</button>
+          </form> -->
+
+          <!-- <form action="/harleys/<%=harleys[i].id%>/edit" method="GET">
+            <button type="submit">Edit Harley</button>
+          </form> -->
+        
+        </li>
+      <% } %>
+    </ul>
+
+    <!-- <button>
+      <a href="/harleys/new">Add a Harley</a>
+    </button> -->
+</body>
+</html>
