@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
-const PORT = 3000
+const PORT = 5000
 
 require('./db/db')
 

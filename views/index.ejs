@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Harleys Homepage</title>
+  <title>Harley Davidson Index</title>
 </head>
 <body>
   <h1>Harley Davidson</h1>
@@ -11,20 +11,20 @@
           
           <a href="/harleys/<%=harleys[i].id%>"><%=harleys[i].name%></a>
 
-          <!-- <form action="/harleys/<%=harleys[i].id%>?_method=DELETE" method="POST">
+          <form action="/harleys/<%=harleys[i].id%>?_method=DELETE" method="POST">
             <button type="submit">Delete Harley</button>
-          </form> -->
+          </form>
 
-          <!-- <form action="/harleys/<%=harleys[i].id%>/edit" method="GET">
+          <form action="/harleys/<%=harleys[i].id%>/edit" method="GET">
             <button type="submit">Edit Harley</button>
-          </form> -->
+          </form>
         
         </li>
       <% } %>
     </ul>
 
-    <!-- <button>
-      <a href="/harleys/new">Add a Harley</a>
-    </button> -->
+    <button>
+      <a href="/new">Add a Harley</a>
+    </button>
 </body>
 </html>

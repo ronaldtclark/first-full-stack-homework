@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const harleySchema = new mongoose.Schema ({
-  name: String,
+  model: String,
   engine: String,
   torque: Number,
   weight: Number
