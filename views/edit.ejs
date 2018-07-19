@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit</title>
+</head>
+<body>
+  <h1>Edit Harley</h1>
+    <form action="/harleys/<%=harley.id%>?_method=PUT" method="POST">
+      <input type="text" name="model" value="<%=harley.model%>"><br>
+      <input type="text" name="engine" value="<%=harley.engine%>"><br>
+      <input type="number" name="torque" value="<%=harley.torque%>"><br>
+      <input type="number" name="weight" value="<%=harley.weight%>"><br>
+      <input type="submit" value="Submit Changes">
+    </form>
+</body>
+</html>

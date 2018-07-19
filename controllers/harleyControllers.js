@@ -18,17 +18,22 @@ router.get('/', (req, res) => {
   })
 })
 
+//CREATE
+router.post('/', (req, res) => {
+  Harleys.create(req.body, (err, createdHarley) => {
+    if (err) {
+      res.send(err)
+    } else {
+      res.redirect('/harleys')
+    }
+  })
+})
+
 //NEW
 router.get('/new', (req, res) => {
   res.render('new.ejs')
 })
 
-//POST
-router.post('/', (req, res) => {
-  Harleys.create(req.params.id, (err, createdHarley) => {
-    res.redirect('/')
-  })
-})
 
 //EDIT
 router.get('/:id/edit', (req, res) => {
@@ -56,7 +61,7 @@ router.get('/:id', (req, res) => {
 })
 
 //DELETE
-router.delete(':/id', (req, res) => {
+router.delete('/:id', (req, res) => {
   Harleys.findByIdAndRemove(req.params.id, (err, deletedHarley) =>{
     res.redirect('/harleys')
   })

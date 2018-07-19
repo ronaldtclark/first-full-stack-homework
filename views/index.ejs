@@ -9,7 +9,7 @@
       <% for ( let i = 0; i < harleys.length; i++) { %>
         <li>
           
-          <a href="/harleys/<%=harleys[i].id%>"><%=harleys[i].name%></a>
+          <a href="/harleys/<%=harleys[i].id%>"><%=harleys[i].model%></a>
 
           <form action="/harleys/<%=harleys[i].id%>?_method=DELETE" method="POST">
             <button type="submit">Delete Harley</button>
@@ -24,7 +24,7 @@
     </ul>
 
     <button>
-      <a href="/new">Add a Harley</a>
+      <a href="/harleys/new">Add a Harley</a>
     </button>
 </body>
 </html>
